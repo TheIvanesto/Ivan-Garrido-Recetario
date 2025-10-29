@@ -1,0 +1,6 @@
+/*    /index.html   200
+
+# Optional: cache static assets for 1 day
+/assets/*  /assets/:splat  200  Cache-Control=max-age=86400
+
+# If you use any static folders, you can add explicit rules above

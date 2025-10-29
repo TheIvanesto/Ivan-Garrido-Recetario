@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recetario - Receta</title>
+</head>
+<body>
+  <p>Abriendo vista de receta...</p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    if(id){
+  location.href = `index.html#/receta/${encodeURIComponent(id)}`;
+    } else {
+  location.href = 'index.html#/catalogo';
+    }
+  </script>
+  <noscript>
+  <p>Si no se redirige automáticamente, <a href="index.html#/catalogo">abrir catálogo</a>.</p>
+  </noscript>
+</body>
+</html>
