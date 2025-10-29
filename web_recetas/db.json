@@ -1,5 +1,0 @@
-{
-  "user_recipes": [
-    { "id": 1, "title": "Ejemplo de usuario: Ensalada simple", "description": "Lechuga, tomate y aceite.", "ingredients":[{"name":"lechuga","quantity":"1 unit"},{"name":"tomate","quantity":"2 unit"}] }
-  ]
-}
