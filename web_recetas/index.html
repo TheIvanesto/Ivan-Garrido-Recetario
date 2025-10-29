@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recetario - Inicio</title>
+  <style>body{font-family:system-ui,Segoe UI,Roboto,Arial;padding:2rem;background:#fff9f4;color:#2b2b2b}</style>
+</head>
+<body>
+  <h1>Recetario (Autocontenido)</h1>
+  <p>Redirigiendo al recetario... Si no ves nada, haz clic en el enlace de abajo.</p>
+  <p><a id="lnk" href="recetario_chrome.html#/catalogo">Abrir Recetario</a></p>
+  <p>Si prefieres abrir una vista concreta, usa los archivos adicionales en esta carpeta (catalogo.html, planner.html, lista-compra.html, receta.html?id=r3).</p>
+  <script>
+    // Intentar abrir el recetario en la raíz de la carpeta
+    try{ location.href = 'recetario_chrome.html#/catalogo'; }catch(e){ /* fallback: dejar el enlace visible */ }
+  </script>
+</body>
+</html>
