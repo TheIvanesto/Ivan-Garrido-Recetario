@@ -1,0 +1,141 @@
+:root{
+  --bg: #fff8f3;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #6e6b67;
+  --primary: #c84b31;
+  --accent: #ffb86b;
+  --card-shadow: 0 8px 30px rgba(31,31,31,0.08);
+  --radius-lg: 14px;
+  --gap: 18px;
+  --max-width: 1100px;
+}
+[data-theme="dark"]{
+  --bg: linear-gradient(180deg,#0b0f0d,#0f1410);
+  --surface: #0f1413;
+  --text: #eef6ea;
+  --muted: #9aa89a;
+  --primary: #ff8a66;
+  --accent: #ffd9a6;
+  --card-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.app{max-width:var(--max-width);margin:24px auto;padding:24px}
+header.nav{display:flex;align-items:center;gap:12px;padding:14px 0}
+.brand{display:flex;flex-direction:column}
+.logo{font-size:1.4rem;color:var(--primary)}
+.tag{font-size:0.8rem;color:var(--muted)}
+.main-nav{margin-left:24px}
+.main-nav a{color:var(--muted);text-decoration:none;margin-right:12px;padding:6px 8px;border-radius:8px}
+.main-nav a:focus, .main-nav a:hover{background:rgba(0,0,0,0.03)}
+.controls{margin-left:auto;display:flex;align-items:center;gap:8px}
+.searchbar{width:340px}
+.searchbar input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(0,0,0,0.08);box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);font-size:0.95rem}
+.icon-btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:10px;cursor:pointer}
+.icon-btn.active{background:rgba(200,75,49,0.08);border-color:rgba(200,75,49,0.2)}
+.icon-btn:focus{outline:3px solid rgba(200,75,49,0.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--surface);border-radius:12px;box-shadow:var(--card-shadow);overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(0,0,0,0.03)}
+.poster{height:140px;background:linear-gradient(90deg,var(--accent),var(--primary));color:#fff;display:flex;align-items:center;padding:0 14px;font-weight:700;font-size:1.05rem}
+.body{padding:14px}
+.body h4{margin:0 0 6px 0}
+.muted{color:var(--muted);font-size:0.9rem}
+.actions{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(0,0,0,0.03);background:linear-gradient(180deg,transparent,rgba(0,0,0,0.01));}
+.btn{background:var(--primary);color:#fff;padding:8px 12px;border-radius:10px;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.icon-btn.fav{font-size:1.05rem}
+.section{padding:8px 0}
+.portion-controls{display:flex;gap:8px;align-items:center;margin:10px 0}
+.ingredients-list{list-style:none;padding:0;margin:8px 0}
+.ingredients-list li{padding:6px 0;border-bottom:1px dashed rgba(0,0,0,0.03);color:var(--muted)}
+.planner-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:12px}
+.planner-cell{min-height:90px;border-radius:10px;padding:8px;background:var(--surface);border:1px dashed rgba(0,0,0,0.03)}
+footer{margin-top:30px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.04);color:var(--muted)}
+
+/* Recipe background variants (decorative, no external assets) */
+.recipe-bg{position:relative;overflow:hidden;border-radius:12px;padding:18px}
+.recipe-bg > *{position:relative;z-index:2}
+.recipe-bg::before{content:'';position:absolute;inset:0;z-index:1;opacity:0.16;filter:blur(6px);transform:scale(1.03)}
+.recipe-bg::after{content:'';position:absolute;inset:0;z-index:1;mix-blend-mode:multiply;opacity:0.08}
+
+/* Italian - vertical tricolor (verde blanco rojo) */
+.bg-italian::before{background:linear-gradient(90deg,#008751 0 33.333%, #ffffff 33.333% 66.666%, #d62728 66.666% 100%)}
+.bg-italian::after{background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.05))}
+
+/* International - blue with tiny 'stars' dotted pattern */
+.bg-international::before{background: linear-gradient(90deg,#ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8b00ff);} /* rainbow for international */
+.bg-international::after{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); opacity:0.08}
+
+/* Mexican - similar tricolor but with warm overlay */
+.bg-mexican::before{background:linear-gradient(90deg,#006847 0 33.333%, #ffffff 33.333% 66.666%, #ce1126 66.666% 100%)}
+.bg-mexican::after{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.06))}
+
+/* Japanese - rising sun: white with red circle */
+.bg-japanese::before{background:linear-gradient(180deg,#fff,#f8f7f2);}
+.bg-japanese::after{background:radial-gradient(circle at 55% 45%, rgba(210,28,38,0.95) 0 60px, transparent 61px), linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06))}
+
+/* Indian - saffron, white, green hint */
+.bg-indian::before{background:linear-gradient(180deg,#ff9933 0 33.333%, #ffffff 33.333% 66.666%, #138808 66.666% 100%)}
+.bg-indian::after{background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06))}
+
+/* Chinese - red with subtle gold specks */
+.bg-chinese::before{background:linear-gradient(180deg,#c40000,#a00000)}
+.bg-chinese::after{background-image:radial-gradient(circle at 10% 20%, rgba(255,215,0,0.9) 0 1px, transparent 2px);background-size:14px 14px}
+
+/* Mediterranean - navy with golden stars */
+.bg-mediterranean::before{background:linear-gradient(180deg,#021b3a,#052a4d);} /* deep navy base */
+.bg-mediterranean::after{background-image: radial-gradient(circle at 8% 12%, rgba(255,215,0,0.95) 0 1px, transparent 2px), radial-gradient(circle at 30% 40%, rgba(255,215,0,0.9) 0 1px, transparent 2px); background-size:10px 10px, 12px 12px; opacity:0.12}
+
+/* Moroccan - red with a green star emblem (SVG data-uri) */
+.bg-moroccan::before{background:linear-gradient(180deg,#c40000,#9b0000)}
+.bg-moroccan::after{background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,15 61,39 88,39 66,57 74,84 50,68 26,84 34,57 12,39 39,39' fill='%23039800' /></svg>"); background-repeat:no-repeat; background-position:18% 40%; background-size:90px 90px; opacity:0.12}
+
+/* French - blue white red horizontal */
+.bg-french::before{background:linear-gradient(90deg,#0055a4 0 33.333%, #ffffff 33.333% 66.666%, #ef4135 66.666% 100%)}
+.bg-french::after{background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06))}
+
+/* Spanish - warm ochre and red */
+.bg-spanish::before{background:linear-gradient(180deg,#f6b042,#c11f1f)}
+.bg-spanish::after{background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.08))}
+
+/* American - stripes and a subtle starfield top-left */
+.bg-american::before{background-image:linear-gradient(90deg,#b22234 0 20%, #fff 20% 40%, #b22234 40% 60%, #fff 60% 80%, #b22234 80% 100%), linear-gradient(180deg,#3c6aa6,#244e78);background-blend-mode:normal;}
+.bg-american::after{background:radial-gradient(circle at 12% 12%, rgba(255,255,255,0.95) 0 2px, transparent 3px);background-size:8px 8px;opacity:0.12}
+
+/* Greek - blue and white stripes simplified */
+.bg-greek::before{background:repeating-linear-gradient(180deg,#0d47a1 0 12.5%, #fff 12.5% 25%);}
+.bg-greek::after{background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06))}
+
+/* Fallback/default subtle texture */
+.bg-default::before{background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.04));}
+.bg-default::after{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02))}
+
+/* responsive */
+@media (max-width:800px){ .searchbar{width:160px} .grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))} .controls{gap:6px} }
+
+/* Tips & pairings styling */
+.tips, .pairings{margin-top:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.04)}
+.tips h3, .pairings h3{margin:0 0 8px 0;font-size:1.05rem}
+.tips ul, .pairings ul{margin:0;padding-left:18px;color:var(--muted)}
+.pairings li{font-weight:600;color:var(--text)}
+
+/* Beverages listing in maridaje catalog */
+.beverages{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+.beverage-item{background:var(--surface);padding:10px;border-radius:10px;box-shadow:var(--card-shadow);border:1px solid rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;color:var(--text)}
+.beverage-item .btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px 10px;border-radius:8px;color:var(--text)}
+.beverage-item .btn:hover{background:rgba(0,0,0,0.04)}
+
+/* ensure links in beverage detail are readable (dark) */
+.beverage-detail a{color:var(--text);font-weight:600;text-decoration:underline}
+.beverage-detail a:visited{color:var(--muted)}
+
+/* Lista - agrupación de recetas */
+.list-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.group-header{font-size:1.05rem;font-weight:700;margin:12px 0 6px 0;padding:8px;border-radius:8px;background:linear-gradient(90deg,rgba(0,0,0,0.02),transparent)}
+.recipe-group{display:block;background:var(--surface);padding:10px;border-radius:10px;box-shadow:var(--card-shadow);margin-bottom:12px;border:1px solid rgba(0,0,0,0.04)}
+.recipe-item{padding:6px 4px;border-bottom:1px dashed rgba(0,0,0,0.04);display:flex;justify-content:space-between;align-items:center}
+.recipe-item:last-child{border-bottom:none}
+.meta{color:var(--muted);font-size:0.9rem}
+
+/* print */
+@media print{ .controls, header, .actions, .icon-btn { display:none } .card{box-shadow:none;border:none} }

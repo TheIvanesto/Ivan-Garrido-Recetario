@@ -1,0 +1,129 @@
+/* Estilos para la sección de perfil en acerca.html */
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff9800;
+    box-shadow: 0 2px 8px #0002;
+    margin-bottom: 0.5em;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+nav {
+    background: #222;
+    padding: 0.5em 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 1.5em;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: #ff9800;
+}
+header {
+    color: #fff;
+    text-align: center;
+    padding: 4em 1em 2em 1em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.header-portada {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+}
+.header-acerca {
+    background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');
+}
+.header-portafolio {
+    background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80');
+}
+.header-contacto {
+    background-image: url('https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1200&q=80');
+}
+header h1 {
+    margin: 0 0 0.5em 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px #0008;
+}
+header p {
+    margin: 0;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 6px #0007;
+}
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+}
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0 1em 0;
+    margin-top: 2em;
+}
+footer .redes a {
+    color: #ff9800;
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+footer .redes a:hover {
+    text-decoration: underline;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+form label {
+    font-weight: bold;
+}
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+form button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 0.7em;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #e65100;
+}
